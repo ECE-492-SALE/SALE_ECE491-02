@@ -44,6 +44,6 @@ Reboot the pico, then drag and drop the .uf2 file from the build file into the p
 cd into SALE_ECE491-02
 ```bash
 git add Folder_Name
-git commit -m "Folder_Name"
+git commit -m "message/notes"
 git push
 ```
