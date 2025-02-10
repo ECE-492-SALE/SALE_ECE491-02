@@ -12,7 +12,7 @@ void Network::connect() {
     Serial.println(WIFI_SSID);
 
     // Connect to WPA/WPA2 network:
-
+    WiFi.config(IPAddress(10,20,0,20));
     status = WiFi.begin(WIFI_SSID, WIFI_PASSWORD); //Set these credentials
 
     // wait to connect:
