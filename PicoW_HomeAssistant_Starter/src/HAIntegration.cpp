@@ -1,3 +1,6 @@
+// Adapted from:
+// https://github.com/daniloc/PicoW_HomeAssistant_Starter/tree/main/src
+
 #include "HAIntegration.h"
 #include "Credentials.h"
 

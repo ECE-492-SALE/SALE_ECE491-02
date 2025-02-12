@@ -1,3 +1,6 @@
+// Adapted from:
+// https://github.com/daniloc/PicoW_HomeAssistant_Starter/tree/main/src
+
 #include <WiFi.h>
 #include "Network.h"
 #include "Credentials.h"
@@ -12,6 +15,7 @@ void Network::connect() {
     Serial.println(WIFI_SSID);
 
     // Connect to WPA/WPA2 network:
+    // Change the last number/argument for your own device, following the guidelines in the drive
     WiFi.config(IPAddress(10,20,0,20));
     status = WiFi.begin(WIFI_SSID, WIFI_PASSWORD); //Set these credentials
 
