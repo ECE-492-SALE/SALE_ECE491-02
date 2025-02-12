@@ -1,0 +1,9 @@
+[submodule "CalumWorkFolder"]
+	path = CalumWorkFolder
+	url = https://github.com/calumapplepie/SeniorDesignProject
+	branch = master
+	
+[submodule "picow-iot-test"]
+	path = picow-iot-test
+	url = https://github.com/cniles/picow-iot
+	branch = main
