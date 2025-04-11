@@ -36,7 +36,7 @@ void HAIntegration::configure() {
     pillstepper.setMaxSpeed(1000.0);
     pillstepper.setAcceleration(100.0);
     pillstepper.setSpeed(200);
-    pillstepper.moveTo(20000);
+    pillstepper.moveTo(0);
 
     digitalWrite(LED_PIN, LOW); 
         
