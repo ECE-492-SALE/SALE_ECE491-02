@@ -10,19 +10,19 @@
 //Adapted via:
 //  https://github.com/dawidchyrzynski/arduino-home-assistant/blob/main/examples/nano33iot/nano33iot.ino
 
-#define LIGHT_PIN   13
+#define RELAY_PIN   13
 
 WiFiClient client;
 HADevice device;
 HAMqtt mqtt(client, device);
-HASwitch light("lightREAL");
+HASwitch door("door");
 
 void HAIntegration::configure() {
 
-    //Prepare Light:
+    //Prepare Door:
 
-    pinMode(LIGHT_PIN, OUTPUT); //Prepare pin
-    digitalWrite(LIGHT_PIN, LOW); //Set default mode
+    pinMode(RELAY_PIN, OUTPUT); //Prepare pin
+    digitalWrite(RELAY_PIN, LOW); //Set default mode
     
     //Set device ID as MAC address
 
@@ -36,8 +36,8 @@ void HAIntegration::configure() {
     device.setSoftwareVersion("0.1");
 
     // handle switch state
-    light.onCommand(switchHandler);
-    light.setName("Smart Light"); // optional
+    door.onCommand(switchHandler);
+    door.setName("Smart Door"); // optional
 
     Serial.print("Connecting to MQTT\n");
     
@@ -49,7 +49,7 @@ void HAIntegration::configure() {
 }
 
 void HAIntegration::switchHandler(bool state, HASwitch* sender) {
-    digitalWrite(LIGHT_PIN, (state ? HIGH : LOW)); //Set light state, default off if null
+    digitalWrite(RELAY_PIN, (state ? HIGH : LOW)); //Set door state, default off if null
     sender->setState(state);  // report state back to Home Assistant
 }
 
