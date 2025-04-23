@@ -17,6 +17,8 @@
 #define motorPin2  27     // IN2 on the ULN2003 driver 1
 #define motorPin3  26     // IN3 on the ULN2003 driver 1
 #define motorPin4  22     // IN4 on the ULN2003 driver 1
+#define rev 4076
+#define home 75
 
 
 AccelStepper pillstepper(8, motorPin1, motorPin3, motorPin2, motorPin4);
@@ -24,7 +26,7 @@ AccelStepper pillstepper(8, motorPin1, motorPin3, motorPin2, motorPin4);
 WiFiClient client;
 HADevice device;
 HAMqtt mqtt(client, device);
-HASwitch pillbox("pillbox");
+HAButton pillbox("pillbox");
 
 void HAIntegration::configure() {
 
@@ -33,12 +35,12 @@ void HAIntegration::configure() {
     pinMode(LED_PIN, OUTPUT);
     digitalWrite(LED_PIN, HIGH); 
 
+    //pillstepper.setCurrentPosition(#);
     pillstepper.setMaxSpeed(1000.0);
     pillstepper.setAcceleration(100.0);
     pillstepper.setSpeed(200);
     pillstepper.moveTo(0);
-
-    digitalWrite(LED_PIN, LOW); 
+    pillstepper.runToPosition();
         
     
     //Set device ID as MAC address
@@ -49,12 +51,12 @@ void HAIntegration::configure() {
 
     //Device metadata:
 
-    device.setName("Pico W HA Starter");
+    device.setName("Smart Pillbox");
     device.setSoftwareVersion("0.1");
 
     // handle switch state
-    pillbox.onCommand(switchHandler);
-    pillbox.setName("Smart Pill Box"); // optional
+    pillbox.onCommand(onButtonCommand);
+    pillbox.setName("Smart Pillbox");
 
     Serial.print("Connecting to MQTT\n");
     
@@ -65,16 +67,18 @@ void HAIntegration::configure() {
     }
 }
 
-void HAIntegration::switchHandler(bool state, HASwitch* sender) {
-    digitalWrite(LED_PIN, (state ? HIGH : LOW));
-    sender->setState(state);  // report state back to Home Assistant
+void HAIntegration::onButtonCommand(HAButton* sender) {
+    if (sender == &pillbox) {
+        pillstepper.move(rev/8);
+        pillstepper.enableOutputs();
+        pillstepper.runToPosition();
+    }
 }
 
 
 void HAIntegration::loop() {
     mqtt.loop();
-    if (pillstepper.distanceToGo() == 0) {
-        pillstepper.moveTo(-pillstepper.currentPosition());
-      }
-      pillstepper.run();
+    if(!pillstepper.isRunning()) {
+        pillstepper.disableOutputs();
+    }
 }

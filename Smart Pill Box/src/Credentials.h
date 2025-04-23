@@ -14,7 +14,7 @@
 #define MQTT_PASSWORD "NoBusPlease"
 
 
-#define MQTT_BROKER IPAddress(10,20,0,87)
+#define MQTT_BROKER IPAddress(10,20,0,1)
 
 
 #endif // SRC_CREDENTIALS

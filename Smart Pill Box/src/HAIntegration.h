@@ -10,7 +10,7 @@ class HAIntegration {
     public:
     void loop();
     void configure();
-    static void switchHandler(bool state, HASwitch* sender);
+    static void onButtonCommand(HAButton* sender);
 };
 
 #endif // SRC_HAINTEGRATION

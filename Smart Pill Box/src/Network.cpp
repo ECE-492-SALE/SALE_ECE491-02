@@ -16,7 +16,7 @@ void Network::connect() {
 
     // Connect to WPA/WPA2 network:
     // Change the last number/argument for your own device, following the guidelines in the drive
-    WiFi.config(IPAddress(10,20,0,20));
+    WiFi.config(IPAddress(10,20,0,76));
     status = WiFi.begin(WIFI_SSID, WIFI_PASSWORD); //Set these credentials
 
     // wait to connect:
