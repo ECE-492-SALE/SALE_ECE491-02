@@ -7,3 +7,6 @@
 	path = picow-iot-test
 	url = https://github.com/cniles/picow-iot
 	branch = main
+[submodule "CameraPicoConnectionProject"]
+	path = CameraPicoConnectionProject
+	url = https://github.com/torzewss/CameraPicoConnectionProject
