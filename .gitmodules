@@ -10,3 +10,6 @@
 [submodule "CameraPicoConnectionProject"]
 	path = CameraPicoConnectionProject
 	url = https://github.com/torzewss/CameraPicoConnectionProject
+[submodule "ESPHomeDeviceConfigs"]
+	path = ESPHomeDeviceConfigs
+	url = https://github.com/calumapplepie/ESPHomeDeviceConfigs.git
