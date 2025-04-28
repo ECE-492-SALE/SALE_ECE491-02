@@ -1,4 +1,10 @@
 import network
+import urequests
+from picozero import pico_led
+from time import sleep
+import sys
+import socket
+
 ssid = 'pards'
 
 def connect():
@@ -32,31 +38,48 @@ def connect():
 ip_local = connect()
 
 import socket
-addr_local = (ip_local, 8060)
-addr_roku  = socket.getaddrinfo('139.147.192.3', 8060)[0][-1]
 
-socket_receive = socket.socket()
-socket_receive.bind(addr_local)
-socket_receive.listen(4)
+try:
+    addr_local = (ip_local, 8060)
+    addr_roku  = socket.getaddrinfo('139.147.192.3', 8060)[0][-1]
 
-print('listening on', addr_local)
+    socket_receive = socket.socket()
+    socket_receive.bind(addr_local)
+    socket_receive.listen(4)
 
-while True:
-    cl, addr = socket_receive.accept()
-    print('client connected from', addr)
-    
-    socket_roku = socket.socket()
-    socket_roku.connect(addr_roku)
-    
-    # forward request
-    request_data = cl.recv(4096)
-    data_sent = socket_roku.sendall(request_data)
-    print(f"forwarded {data_sent} bytes")
-    
-    # read all the response data; will not return until roku closes connection
-    response_data = socket_roku.read()
-    cl.sendall(response_data)
-    
-    cl.close()
-    
+    print('listening on', addr_local)
+
+
+
+    while True:
+        socket_hub, addr = socket_receive.accept()
+        print('\nclient (hub) connected from', addr)
+        
+        socket_roku = socket.socket()
+        socket_roku.connect(addr_roku)
+        
+        # forward request
+        request_data = socket_hub.recv(4096)
+        request_data = request_data.replace(b"139.147.192.4", b"139.147.192.3", 1)
+        print(f"request data: {request_data}")
+        
+        data_sent = socket_roku.write(request_data)
+        print(f"forwarded {data_sent} bytes")
+        
+        # read all the response data; will not return until roku closes connection
+        response_data = socket_roku.read()
+        print(f"response data: {response_data}")
+        
+        socket_hub.write(response_data)
+        
+        socket_hub.close()
+        socket_roku.close()
+except Exception as e:
+    print(e)
+    socket_receive.close()
+    socket_hub.close()
+    socket_roku.close()
+    network.WLAN(network.STA_IF).disconnect()
+    print('disconnected and shutting down')
+    raise Exception(e) from e
 
