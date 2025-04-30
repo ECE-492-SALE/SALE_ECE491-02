@@ -31,7 +31,7 @@ _UART_SERVICE = (
 
 
 class BLESimplePeripheral:
-    def __init__(self, ble, name="mpy-uart"):
+    def __init__(self, ble, name="mpy-kick"):
         self._ble = ble
         self._ble.active(True)
         self._ble.irq(self._irq)
@@ -47,6 +47,7 @@ class BLESimplePeripheral:
             conn_handle, _, _ = data
             print("New connection", conn_handle)
             self._connections.add(conn_handle)
+            #self._ble.gatts_write(self._handle_tx, data)
         elif event == _IRQ_CENTRAL_DISCONNECT:
             conn_handle, _, _ = data
             print("Disconnected", conn_handle)
@@ -94,6 +95,3 @@ def demo():
                 i += 1
         time.sleep_ms(100)
 
-
-if __name__ == "__main__":
-    demo()
