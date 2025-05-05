@@ -48,7 +48,7 @@ try:
 
     socket_receive = socket.socket()
     socket_receive.bind(addr_local)
-    socket_receive.listen(1)
+    socket_receive.listen(2)
 
     print('listening on', addr_local)
 
@@ -103,10 +103,11 @@ try:
         socket_roku.close()
 except Exception as e:
     print(e)
+    pico_led.off()
     socket_receive.close()
     socket_hub.close()
     socket_roku.close()
     network.WLAN(network.STA_IF).disconnect()
+    
     print('disconnected and shutting down')
     sys.print_exception(e)
-
