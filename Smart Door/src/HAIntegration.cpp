@@ -10,12 +10,12 @@
 //Adapted via:
 //  https://github.com/dawidchyrzynski/arduino-home-assistant/blob/main/examples/nano33iot/nano33iot.ino
 
-#define RELAY_PIN   13
+#define RELAY_PIN   28
 
 WiFiClient client;
 HADevice device;
 HAMqtt mqtt(client, device);
-HASwitch door("door");
+HAButton door("door");
 
 void HAIntegration::configure() {
 
@@ -32,12 +32,12 @@ void HAIntegration::configure() {
 
     //Device metadata:
 
-    device.setName("Pico W HA Starter");
+    device.setName("Smart Door");
     device.setSoftwareVersion("0.1");
 
     // handle switch state
-    door.onCommand(switchHandler);
-    door.setName("Smart Door"); // optional
+    door.onCommand(onButtonCommand);
+    door.setName("Open Door"); // optional
 
     Serial.print("Connecting to MQTT\n");
     
@@ -48,9 +48,11 @@ void HAIntegration::configure() {
     }
 }
 
-void HAIntegration::switchHandler(bool state, HASwitch* sender) {
-    digitalWrite(RELAY_PIN, (state ? HIGH : LOW)); //Set door state, default off if null
-    sender->setState(state);  // report state back to Home Assistant
+void HAIntegration::onButtonCommand(HAButton* sender) {
+    //digitalWrite(RELAY_PIN, (!digitalRead(RELAY_PIN) ? HIGH : LOW)); //Set door state, default off if null
+    digitalWrite(RELAY_PIN, HIGH);
+    delay(100);
+    digitalWrite(RELAY_PIN, LOW);
 }
 
 
