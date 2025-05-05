@@ -48,12 +48,12 @@ try:
 
     socket_receive = socket.socket()
     socket_receive.bind(addr_local)
-    socket_receive.listen(2)
+    socket_receive.listen(3)
 
     print('listening on', addr_local)
 
-
-    timeout = 10
+    # place in non-blocking mode 
+    timeout = 0 
 
     while True:
         socket_hub, addr = socket_receive.accept()
@@ -64,35 +64,46 @@ try:
         socket_roku.connect(addr_roku)
         socket_roku.settimeout(timeout)
         
-        # forward request
+        cycles_since_data = 0;
         
-        print_time_since_last()
-        request_data = socket_hub.recv(4096)
-        request_data = request_data.replace(b"139.147.192.4", b"139.147.192.3", 1)
-        print(f"request data: {request_data}")
         
-        data_sent = socket_roku.write(request_data)
-        print_time_since_last()
-        print(f"forwarded {data_sent} bytes")
-        
-        '''
-        # read all the response data; will not return until roku closes connection - .read()
-        response_data = socket_roku.read()
-        print(f"response_data: {response_data}")
-        socket_hub.write(response_data)'''
-        
-        print("response_data:")
         while True:
-            socket_roku.settimeout(1)
+            # forward request
+            
+            print_time_since_last()
+            time.sleep(0.002) # ensure time to receive *some* data
+            try:
+                # try to read some data from the hub; we might still be in the initial request
+                request_data = socket_hub.recv(4096)
+            except Exception as e:
+                print_time_since_last()
+                print("\nfailed to read hub socket; closing connection\n")
+                break;
+                
+            if request_data 
+                request_data = request_data.replace(b"139.147.192.4", b"139.147.192.3", 1)
+                print(f"request data: {request_data}")
+            
+                data_sent = socket_roku.write(request_data)
+                print_time_since_last()
+                print(f"forwarded {data_sent} bytes")
+            
+            print("response_data:")
+            
             try:
                 response_data = socket_roku.recv(256)
                 
                 if response_data:
                     print(response_data)
                     socket_hub.write(response_data)
+                    cycles_since_data = 0
                     #print_time_since_last()
                 else:
-                    raise Exception("done sending")
+                    cycles_since_data++
+                    # give data a chance to arrive
+                    if cycles_since_data > 5:
+                        raise Exception("done sending")
+                    time.sleep(0.001)
             except Exception as e:
                 print_time_since_last()
                 print("\ndone\n")
