@@ -35,7 +35,7 @@ def connect():
 last_call = time.ticks_ms();
 def print_time_since_last():
     global last_call
-    print(time.ticks_ms()-last_call)
+    print("time since last: ", time.ticks_ms()-last_call)
     last_call = time.ticks_ms()
 
 ip_local = connect()
@@ -74,13 +74,14 @@ try:
             time.sleep(0.002) # ensure time to receive *some* data
             try:
                 # try to read some data from the hub; we might still be in the initial request
-                request_data = socket_hub.recv(4096)
+                request_data = socket_hub.read(4096)
             except Exception as e:
                 print_time_since_last()
+                sys.print_exception(e)
                 print("\nfailed to read hub socket; closing connection\n")
                 break;
                 
-            if request_data 
+            if request_data: 
                 request_data = request_data.replace(b"139.147.192.4", b"139.147.192.3", 1)
                 print(f"request data: {request_data}")
             
@@ -91,7 +92,7 @@ try:
             print("response_data:")
             
             try:
-                response_data = socket_roku.recv(256)
+                response_data = socket_roku.read(256)
                 
                 if response_data:
                     print(response_data)
@@ -99,26 +100,40 @@ try:
                     cycles_since_data = 0
                     #print_time_since_last()
                 else:
-                    cycles_since_data++
+                    cycles_since_data += 1
                     # give data a chance to arrive
                     if cycles_since_data > 5:
+                        print(f"no data received for {cycles_since_data} cycles, stopping")
                         raise Exception("done sending")
-                    time.sleep(0.001)
+                    time.sleep(0.1)
+                    print(f"no data received for {cycles_since_data} cycles, continuing")
+            except OSError as e:
+                if e.args[0] == 11:
+                   # EAGAIN error occurred, add your retry logic here
+                   passconnect
             except Exception as e:
                 print_time_since_last()
+                sys.print_exception(e)
                 print("\ndone\n")
                 break
                 
         
         socket_hub.close()
         socket_roku.close()
-except Exception as e:
-    print(e)
+except BaseException as e:
     pico_led.off()
-    socket_receive.close()
-    socket_hub.close()
-    socket_roku.close()
+    try:
+        socket_receive.close()
+        socket_hub.close()
+        socket_roku.close()
+    except:
+        pass
     network.WLAN(network.STA_IF).disconnect()
-    
-    print('disconnected and shutting down')
+    print(e)
+    print('disconnected and shutting down?')
+    time.sleep(0.1)
+    network.WLAN(network.STA_IF).active(False)
+    time.sleep(0.1)
+    print('disconnected and shutting down!')
     sys.print_exception(e)
+
