@@ -37,7 +37,7 @@ void HAIntegration::configure() {
 
     // handle switch state
     door.onCommand(onButtonCommand);
-    door.setName("Open Door"); // optional
+    door.setName("Open"); // optional
 
     Serial.print("Connecting to MQTT\n");
     
