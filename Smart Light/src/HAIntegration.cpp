@@ -32,12 +32,12 @@ void HAIntegration::configure() {
 
     //Device metadata:
 
-    device.setName("Pico W HA Starter");
+    device.setName("Smart Light");
     device.setSoftwareVersion("0.1");
 
     // handle switch state
     light.onCommand(switchHandler);
-    light.setName("Smart Light"); // optional
+    light.setName("Switch"); // optional
 
     Serial.print("Connecting to MQTT\n");
     

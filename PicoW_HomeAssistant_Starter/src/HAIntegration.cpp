@@ -32,7 +32,7 @@ void HAIntegration::configure() {
 
     //Device metadata:
 
-    device.setName("Pico W HA Starter");
+    device.setName("Smart Door Lock");
     device.setSoftwareVersion("0.1");
 
     // handle switch state
