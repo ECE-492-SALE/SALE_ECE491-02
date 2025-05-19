@@ -1,0 +1,30 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+assist_pipeline:
+   debug_recording_dir: /share/assist_pipeline
+   
+mqtt:
+    - camera:
+        topic: camera/frames/latest
+        unique_id: scott_cam
+        image_encoding: b64
+        
+# camera:
+#     - platform: proxy
+#       entity_id: camera.mqtt_camera
+#       name: scott_cam_crop_cam
+#       cache_images: true
+#       image_refresh_rate: 1.0
+#       max_stream_width: 1080
+#       max_stream_height: 1080
+ffmpeg:

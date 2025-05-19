@@ -1,0 +1,243 @@
+- id: '1746203391101'
+  alias: Pillbox Audio Feedback
+  description: ''
+  triggers:
+  - device_id: 2c61bc60f1549f099046189b8234f970
+    domain: button
+    entity_id: c681ab0e739770275f15d09483825650
+    type: pressed
+    trigger: device
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.smartspeakeresp32_media_player_2
+    data:
+      media_content_id: media-source://tts/tts.piper?message=Dispensing+Pills&language=en_GB&voice=en_GB-alan-low
+      media_content_type: provider
+    metadata:
+      title: Dispensing Pills
+      thumbnail: https://brands.home-assistant.io/_/tts/logo.png
+      media_class: app
+      children_media_class:
+      navigateIds:
+      - {}
+      - media_content_type: app
+        media_content_id: media-source://tts
+      - media_content_type: provider
+        media_content_id: media-source://tts/tts.piper?message=Dispensing+Pills&language=en_GB&voice=en_GB-alan-low
+    enabled: false
+  - action: tts.speak
+    metadata: {}
+    data:
+      cache: true
+      media_player_entity_id: media_player.smartspeakeresp32_media_player_2
+      message: Dispensing Pills - Option 2
+    enabled: true
+    target:
+      entity_id: tts.piper
+  mode: single
+- id: '1746203762849'
+  alias: LOOK AT ME PRISCILLA
+  description: ''
+  triggers: []
+  conditions: []
+  actions:
+  - action: tts.speak
+    metadata: {}
+    data:
+      cache: true
+      media_player_entity_id: media_player.smartspeakeresp32_media_player_2
+      message: hello world
+    target:
+      entity_id: tts.piper
+  mode: single
+- id: '1746204517566'
+  alias: Smart Window Shades - up/down
+  description: ''
+  triggers:
+  - device_id: 2539b9672d222ba3bd48714e61f94303
+    domain: cover
+    entity_id: cd33e2b8a188adf46b7d42e9c4d6efae
+    type: closing
+    trigger: device
+  conditions: []
+  actions:
+  - action: tts.speak
+    metadata: {}
+    data:
+      cache: true
+      media_player_entity_id: media_player.smartspeakeresp32_media_player_2
+      message: Window Shades - closing
+    enabled: true
+    target:
+      entity_id: tts.piper
+  mode: single
+- id: '1746204710182'
+  alias: Smart Window Shades - stopped
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - cover.pico_window_my_cover
+    from: opening
+    to: open
+  - trigger: state
+    entity_id:
+    - cover.pico_window_my_cover
+    from: closing
+    to:
+    enabled: false
+  conditions: []
+  actions:
+  - action: tts.speak
+    metadata: {}
+    data:
+      cache: true
+      media_player_entity_id: media_player.smartspeakeresp32_media_player_2
+      message: Window Shades - Stopped
+    enabled: true
+    target:
+      entity_id: tts.piper
+  mode: single
+- id: '1746204950493'
+  alias: Smart Window Shades - opening
+  description: ''
+  triggers:
+  - device_id: 2539b9672d222ba3bd48714e61f94303
+    domain: cover
+    entity_id: cd33e2b8a188adf46b7d42e9c4d6efae
+    type: opening
+    trigger: device
+  conditions: []
+  actions:
+  - action: tts.speak
+    metadata: {}
+    data:
+      cache: true
+      media_player_entity_id: media_player.smartspeakeresp32_media_player_2
+      message: Window Shades - opening
+    enabled: true
+    target:
+      entity_id: tts.piper
+  mode: single
+- id: '1746635171695'
+  alias: Pillbox Dispensing Voice Command
+  description: ''
+  triggers:
+  - trigger: conversation
+    command:
+    - Dispense Meds
+    - Dispense Pills
+    - Drugs Please
+    - Gimme My Drugs
+    - Make it rain
+    - Need Tick Tacks
+    - Tick-tax
+    - Tic-tacs
+  conditions: []
+  actions:
+  - action: button.press
+    metadata: {}
+    data: {}
+    target:
+      device_id: 2c61bc60f1549f099046189b8234f970
+  mode: single
+- id: '1746645520875'
+  alias: ScCamera Record
+  description: ''
+  triggers:
+  - trigger: conversation
+    command: Record Video
+  conditions: []
+  actions:
+  - action: camera.record
+    metadata: {}
+    data:
+      duration: 10
+      lookback: 0
+      filename: /share/video/scamera_record_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4
+    target:
+      entity_id: camera.scott_cam_crop_cam
+  mode: single
+- id: '1746730173431'
+  alias: Request Help
+  description: ''
+  triggers:
+  - trigger: event
+    event_type: Resident requests help
+    event_data: {}
+    enabled: false
+  - trigger: state
+    entity_id:
+    - input_boolean.help_needed
+    to: 'on'
+  conditions: []
+  actions:
+  - action: tts.speak
+    metadata: {}
+    data:
+      cache: true
+      media_player_entity_id: media_player.smartspeakeresp32_media_player_2
+      message: Requesting help
+    target:
+      entity_id: tts.piper
+  mode: single
+- id: '1746730875207'
+  alias: Help addressed
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - input_boolean.help_needed
+    to: 'off'
+  conditions: []
+  actions:
+  - action: tts.speak
+    metadata: {}
+    data:
+      cache: true
+      media_player_entity_id: media_player.smartspeakeresp32_media_player_2
+      message: Help request addressed
+    target:
+      entity_id: tts.piper
+  mode: single
+- id: '1747618958313'
+  alias: Pillbox automation 1
+  description: ''
+  triggers:
+  - trigger: time
+    at: input_datetime.pill_box_dispense_time_1
+  conditions:
+  - condition: state
+    entity_id: input_boolean.pillbox_dispense_reminder_1
+    state: 'on'
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.smartspeakeresp32_media_player_2
+    data:
+      media_content_id: media-source://tts/tts.piper?message=Reminder+to+take+medication&language=en_US&voice=en_US-amy-low
+      media_content_type: provider
+    metadata:
+      title: Reminder to take medication
+      thumbnail: https://brands.home-assistant.io/_/tts/logo.png
+      media_class: app
+      children_media_class:
+      navigateIds:
+      - {}
+      - media_content_type: app
+        media_content_id: media-source://tts
+      - media_content_type: provider
+        media_content_id: media-source://tts/tts.piper?message=Reminder+to+take+medication&language=en_US&voice=en_US-amy-low
+  - action: button.press
+    metadata: {}
+    data: {}
+    target:
+      entity_id: button.smart_pillbox_smart_pillbox
+  - action: tts.speak
+    metadata: {}
+    data:
+      cache: true
+    enabled: false
+  mode: single
