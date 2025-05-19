@@ -2,10 +2,16 @@ import network
 from picozero import pico_led
 import time
 import sys
+import socket
+import gc
 
 ssid = 'pards'
 
+def print_mem():
+    print("Available memory (bytes): ", gc.mem_free())
+
 def connect():
+    #print_mem()
     #Connect to WLAN
     wlan = network.WLAN(network.STA_IF)
     # hopefully maybe prevent 'address in use' error
@@ -35,14 +41,13 @@ def connect():
 last_call = time.ticks_ms();
 def print_time_since_last():
     global last_call
-    print("time since last: ", time.ticks_ms()-last_call)
+    #print("time since last: ", time.ticks_ms()-last_call)
     last_call = time.ticks_ms()
 
 ip_local = connect()
 
-import socket
-
 try:
+    print_mem()
     addr_local = (ip_local, 8060)
     addr_roku  = socket.getaddrinfo('139.147.192.3', 8060)[0][-1]
 
@@ -56,6 +61,7 @@ try:
     timeout = 0 
 
     while True:
+        print_mem()
         socket_hub, addr = socket_receive.accept()
         socket_hub.settimeout(timeout)
         print('\nclient (hub) connected from', addr)
@@ -98,28 +104,30 @@ try:
                     print(response_data)
                     socket_hub.write(response_data)
                     cycles_since_data = 0
-                    #print_time_since_last()
+                    print_time_since_last()
                 else:
                     cycles_since_data += 1
                     # give data a chance to arrive
-                    if cycles_since_data > 5:
-                        print(f"no data received for {cycles_since_data} cycles, stopping")
+                    if cycles_since_data > 3:
+                        #print(f"no data received for {cycles_since_data} cycles, stopping")
                         raise Exception("done sending")
                     time.sleep(0.1)
                     print(f"no data received for {cycles_since_data} cycles, continuing")
             except OSError as e:
                 if e.args[0] == 11:
                    # EAGAIN error occurred, add your retry logic here
-                   passconnect
+                   pass
             except Exception as e:
-                print_time_since_last()
+                #print_time_since_last()
                 sys.print_exception(e)
                 print("\ndone\n")
                 break
-                
         
         socket_hub.close()
         socket_roku.close()
+        gc.collect()
+        print_mem()
+        
 except BaseException as e:
     pico_led.off()
     try:
@@ -136,4 +144,3 @@ except BaseException as e:
     time.sleep(0.1)
     print('disconnected and shutting down!')
     sys.print_exception(e)
-
