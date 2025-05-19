@@ -1,1 +1,20 @@
-Follow the steps in \href{https://projects.raspberrypi.org/en/projects/get-started-pico-w/0}{"Getting started with your Raspberry Pi Pico W"} to install MicroPython onto the Pi Pico W and set up the Thonny Python IDE. Open \href{https://github.com/ECE-492-SALE/SALE_ECE491-02/blob/main/Smart%20TV/main.py}{main.py}  in Thonny and save the file to your computer. Edit the section labeled "Internet Credentials" to the Wi-Fi credentials and Roku IP address of your own system. Save this modified program to your pico by selecting File, Save As, Raspberry Pi Pico. Before you click OK, ensure that the file name is "main.py", which may require overwriting an existing main.py file. This will allow the program to start up as soon as the Pico receives power. 
+# Setting up the Smart TV
+
+These instructions assume you already have a Roku set up on your TV.
+
+1. Follow the steps in the [Getting started with your Raspberry Pi Pico W](https://projects.raspberrypi.org/en/projects/get-started-pico-w/0) guide to:
+   - Install MicroPython onto the Pi Pico W
+   - Set up the Thonny Python IDE
+
+2. Download [`main.py`](https://github.com/ECE-492-SALE/SALE_ECE491-02/blob/main/Smart%20TV/main.py).
+
+3. Open main.py in Thonny and edit the **Internet Credentials** section in the code to include:
+   - Your Wi-Fi credentials
+   - Your Roku device's IP address
+
+4. Save the modified program to your Pico:
+   - Go to `File` > `Save As` > `Raspberry Pi Pico`
+   - Ensure the file name is exactly `main.py`
+   - You may need to overwrite the existing `main.py` file
+
+> **Note:** Naming the file `main.py` ensures the program starts automatically when the Pico receives power.
