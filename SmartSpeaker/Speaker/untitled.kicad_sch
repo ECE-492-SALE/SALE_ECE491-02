@@ -1,0 +1,4206 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "d9179c91-0a5d-43ab-8af8-79f70db1514b")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Adafruit MAX9814-eagle-import:C-USC0805K"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 1.016 0.635 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at 1.016 -4.191 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "Adafruit MAX9814:C0805K"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "CAPACITOR, American symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C-USC0805K_1_0"
+				(arc
+					(start 0 -1.0161)
+					(mid -1.302 -1.2303)
+					(end -2.4668 -1.8504)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.016) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 2.4892 -1.8541)
+					(mid 1.3158 -1.2194)
+					(end 0 -1)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Adafruit MAX9814-eagle-import:ELECTRET"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at -5.08 -7.62 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -5.08 2.54 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "Adafruit MAX9814:9.7ELECTRET"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Electret microphone\n\nThru hole 2.54mm spacing with 9.7mm diameter"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ELECTRET_1_0"
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 2.032 -1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.032 -1.27) (xy 2.032 -2.286)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.032 -0.254) (xy 2.032 -1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27) (xy 2.54 -2.286)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27) (xy 3.302 -1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -0.254) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.286 -1.27)
+					(radius 2.54)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 4.826 -3.81)
+					(end 5.334 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Adafruit MAX9814-eagle-import:FERRITE0805"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "FB"
+				(at -2.54 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -2.54 -3.175 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "Adafruit MAX9814:0805"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Ferrite Bead\n\n0603\n\n• MMZ1608B121C - 120 Ohm, 600mA Ferrite Chip - Digikey: 445-2164-1-ND\n• BK1608HW121-T - 120 Ohm, 600mA Ferrite Chip - Digikey: 587-1876-2-ND"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FERRITE0805_1_0"
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin bidirectional line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "P$1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "P$2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Adafruit MAX9814-eagle-import:FIDUCIAL"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Adafruit MAX9814:FIDUCIAL_1MM"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "For use by pick and place machines to calibrate the vision/machine, 1mm\n\nBy microbuilder.eu"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FIDUCIAL_1_0"
+				(circle
+					(center 0 0)
+					(radius 2.54)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+		)
+		(symbol "Adafruit MAX9814-eagle-import:GND"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#GND"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at -2.54 -2.54 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "SUPPLY SYMBOL"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_1_0"
+				(polyline
+					(pts
+						(xy -1.905 0) (xy 1.905 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 2.54 270)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Adafruit MAX9814-eagle-import:HEADER-1X576MIL"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "JP"
+				(at -6.35 8.255 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -6.35 -10.16 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "Adafruit MAX9814:1X05_ROUND_76"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "PIN HEADER"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "HEADER-1X576MIL_1_0"
+				(polyline
+					(pts
+						(xy -6.35 -7.62) (xy 1.27 -7.62)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.35 7.62) (xy -6.35 -7.62)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -7.62) (xy 1.27 7.62)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 7.62) (xy -6.35 7.62)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 5.08 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 2.54 0)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 -2.54 0)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 -5.08 0)
+					(length 2.54)
+					(name "5"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Adafruit MAX9814-eagle-import:MAX9814TDFN14"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" ""
+				(at -2.54 -20.32 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Adafruit MAX9814:TDFN14_3X3MM"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MAX9814TDFN14_1_0"
+				(polyline
+					(pts
+						(xy -12.7 -17.78) (xy -12.7 17.78)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -12.7 17.78) (xy 12.7 17.78)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 12.7 -17.78) (xy -12.7 -17.78)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 12.7 17.78) (xy 12.7 -17.78)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "MAX9814"
+					(at 0 -5.08 900)
+					(effects
+						(font
+							(size 1.778 1.5113)
+						)
+						(justify left bottom)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 15.24 0)
+					(length 5.08)
+					(name "CT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 17.78 -5.08 180)
+					(length 5.08)
+					(name "GAIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 17.78 0 180)
+					(length 5.08)
+					(name "NC2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 17.78 5.08 180)
+					(length 5.08)
+					(name "BIAS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 17.78 10.16 180)
+					(length 5.08)
+					(name "MICBIAS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 17.78 15.24 180)
+					(length 5.08)
+					(name "TH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 10.16 0)
+					(length 5.08)
+					(name "/SHDN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 5.08 0)
+					(length 5.08)
+					(name "CG"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -17.78 0 0)
+					(length 5.08)
+					(name "NC1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -5.08 0)
+					(length 5.08)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -10.16 0)
+					(length 5.08)
+					(name "MICOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -15.24 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 17.78 -15.24 180)
+					(length 5.08)
+					(name "MICIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 17.78 -10.16 180)
+					(length 5.08)
+					(name "A/R"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 0 22.86 270)
+					(length 5.08)
+					(name "EP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P$THERMAL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Adafruit MAX9814-eagle-import:MOUNTINGHOLE2.0"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "Adafruit MAX9814:MOUNTINGHOLE_2.0_PLATED"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole\n\nFor #2 screws (0.086\"/2.18mm width, 0.094\"/2.4mm hole) use 2.5mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MOUNTINGHOLE2.0_1_0"
+				(circle
+					(center 0 0)
+					(radius 1.905)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 2.54)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+		)
+		(symbol "Adafruit MAX9814-eagle-import:R-US_R0805"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -3.81 1.4986 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -3.81 -3.302 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "Adafruit MAX9814:R0805"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "RESISTOR, American symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R-US_R0805_1_0"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -2.159 1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.159 1.016) (xy -1.524 -1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -1.016) (xy -0.889 1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.889 1.016) (xy -0.254 -1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.254 -1.016) (xy 0.381 1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.381 1.016) (xy 1.016 -1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -1.016) (xy 1.651 1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.651 1.016) (xy 2.286 -1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -1.016) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Adafruit MAX9814-eagle-import:VDD"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#VDD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at -2.54 -2.54 90)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "SUPPLY SYMBOL"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "VDD_1_0"
+				(polyline
+					(pts
+						(xy 0 0) (xy -1.27 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy -1.27 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.905) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 120.65 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "38512677-f649-4983-8f1a-6752572a0f39")
+	)
+	(junction
+		(at 214.63 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "429db120-eb0a-4c85-8f08-f045031e4a75")
+	)
+	(junction
+		(at 128.27 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6251ba54-70d8-4df0-88bd-02069398c82d")
+	)
+	(junction
+		(at 140.97 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "810833d6-c815-438f-86dc-698562af1546")
+	)
+	(junction
+		(at 36.83 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "85ceb548-691c-4141-90c1-368ca45852cf")
+	)
+	(junction
+		(at 214.63 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bc7d90bf-23d2-43d9-8f2c-f6d36ed04abf")
+	)
+	(junction
+		(at 128.27 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f9baf4f4-4cf3-4ac2-a869-d71b659ef9f3")
+	)
+	(wire
+		(pts
+			(xy 140.97 119.38) (xy 140.97 114.3)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "0656f26f-6c20-4016-aa90-fff6a54ab7ee")
+	)
+	(wire
+		(pts
+			(xy 49.53 109.22) (xy 69.85 109.22)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "0a6c853f-f904-4561-8b36-e96dc6b9ae2c")
+	)
+	(wire
+		(pts
+			(xy 196.85 111.76) (xy 179.07 111.76)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "11ad8dd8-9291-494b-920d-4cf3a5c6fe7c")
+	)
+	(wire
+		(pts
+			(xy 133.35 149.86) (xy 138.43 144.78)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "15100d1c-342e-46d6-be1f-5ad068ace157")
+	)
+	(wire
+		(pts
+			(xy 36.83 109.22) (xy 41.91 109.22)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "1776a351-488a-4c74-9c4b-04e3c241d24a")
+	)
+	(wire
+		(pts
+			(xy 201.93 106.68) (xy 201.93 81.28)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3189132a-c9b0-40d6-885c-1ac971b80ff3")
+	)
+	(wire
+		(pts
+			(xy 196.85 119.38) (xy 196.85 114.3)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "32a52f69-68a5-4ddb-a61f-107e9c4b4f6d")
+	)
+	(wire
+		(pts
+			(xy 214.63 104.14) (xy 214.63 99.06)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3c2ac52e-ed40-41b6-b223-309b3da213e6")
+	)
+	(wire
+		(pts
+			(xy 214.63 109.22) (xy 214.63 104.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "461de24b-b872-4cad-96c2-31d0bcfaf62d")
+	)
+	(wire
+		(pts
+			(xy 128.27 142.24) (xy 138.43 142.24)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "54408880-d924-4146-aa2c-d824ce11e048")
+	)
+	(wire
+		(pts
+			(xy 105.41 124.46) (xy 115.57 124.46)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "5b79a8e4-c490-4c37-adb0-bf22552a6314")
+	)
+	(wire
+		(pts
+			(xy 62.23 104.14) (xy 69.85 104.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "5ca2a74f-aa97-459e-9c05-a4f6f13fd04a")
+	)
+	(wire
+		(pts
+			(xy 201.93 81.28) (xy 215.9 81.28)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "603a583c-4e5f-4a9d-b442-01ba71b27812")
+	)
+	(wire
+		(pts
+			(xy 62.23 119.38) (xy 69.85 119.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "6bcb50a0-9701-4cb8-a952-2d5eaa7f6dbc")
+	)
+	(wire
+		(pts
+			(xy 115.57 134.62) (xy 115.57 129.54)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7c88b21b-50a1-4414-9176-4fd1a7d5d045")
+	)
+	(wire
+		(pts
+			(xy 115.57 142.24) (xy 128.27 142.24)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7ccb13cc-7a4f-4aa2-a862-43933bedf78c")
+	)
+	(wire
+		(pts
+			(xy 110.49 109.22) (xy 105.41 109.22)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7f6e70a5-8272-48b1-bb17-c681f6143915")
+	)
+	(wire
+		(pts
+			(xy 120.65 109.22) (xy 118.11 109.22)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "813c796c-840f-4526-9252-3f1ea5e9ca00")
+	)
+	(wire
+		(pts
+			(xy 128.27 127) (xy 128.27 142.24)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "8351fc82-c676-4719-8d80-06a3627b55ce")
+	)
+	(wire
+		(pts
+			(xy 214.63 104.14) (xy 217.17 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89fa430f-c438-4cca-9c16-2baddeb6af3d")
+	)
+	(wire
+		(pts
+			(xy 128.27 104.14) (xy 128.27 116.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "8cdb3916-25d3-4991-8f7f-d321696390f2")
+	)
+	(wire
+		(pts
+			(xy 41.91 99.06) (xy 36.83 99.06)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "8dcf3cd1-8141-496c-9e74-122c4f21d9d9")
+	)
+	(wire
+		(pts
+			(xy 105.41 119.38) (xy 115.57 119.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "8f37965f-fee7-41de-8692-04c5b38b020b")
+	)
+	(wire
+		(pts
+			(xy 214.63 104.14) (xy 207.01 104.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "93ec05f3-d377-4c6d-ae3d-3183f5454d9f")
+	)
+	(wire
+		(pts
+			(xy 214.63 116.84) (xy 214.63 119.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "963a4e24-6b0e-411d-9935-a41fa9efaf69")
+	)
+	(wire
+		(pts
+			(xy 207.01 104.14) (xy 207.01 111.76)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "a021a901-8734-44ae-8a49-ca9d38a1c5ab")
+	)
+	(wire
+		(pts
+			(xy 120.65 114.3) (xy 105.41 114.3)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b0d8ff86-0be3-445e-b054-1b4d5a601447")
+	)
+	(wire
+		(pts
+			(xy 49.53 99.06) (xy 69.85 99.06)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "bcb4bdb8-dd47-4f5e-a7ef-b87c5c7f3f19")
+	)
+	(wire
+		(pts
+			(xy 140.97 104.14) (xy 138.43 104.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "bf95cf75-fcaa-405d-9641-639f5cede994")
+	)
+	(wire
+		(pts
+			(xy 120.65 114.3) (xy 120.65 109.22)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c19083b7-cba7-4187-89b2-b5bc5c544f49")
+	)
+	(wire
+		(pts
+			(xy 92.71 91.44) (xy 87.63 91.44)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c30df52b-f800-4da2-982d-72c992c36f80")
+	)
+	(wire
+		(pts
+			(xy 179.07 109.22) (xy 194.31 109.22)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c42b7917-2070-45c3-a5df-e0c2cef25d9e")
+	)
+	(wire
+		(pts
+			(xy 36.83 104.14) (xy 36.83 109.22)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c7124017-f0aa-40ef-ba00-6a0ca3e4bd34")
+	)
+	(wire
+		(pts
+			(xy 179.07 106.68) (xy 201.93 106.68)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d24efb01-4087-4f94-8d60-7e51bb478718")
+	)
+	(wire
+		(pts
+			(xy 140.97 99.06) (xy 140.97 104.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d6e2e6d2-1bbb-477c-8368-a97d7fd6506f")
+	)
+	(wire
+		(pts
+			(xy 36.83 99.06) (xy 36.83 104.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "dd4de78c-f408-4641-a119-c3abb6e18d0f")
+	)
+	(wire
+		(pts
+			(xy 214.63 119.38) (xy 207.01 119.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f1f838b3-6846-4ebb-8357-f9259a577496")
+	)
+	(wire
+		(pts
+			(xy 105.41 104.14) (xy 128.27 104.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f2c00ae1-c57d-41a2-a506-e8353e23203b")
+	)
+	(wire
+		(pts
+			(xy 214.63 119.38) (xy 222.25 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f60c8752-0fa4-44d4-8c70-2a1b6e0af955")
+	)
+	(wire
+		(pts
+			(xy 179.07 104.14) (xy 194.31 104.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f7663d01-22d4-41fb-ad43-15e8e663595d")
+	)
+	(wire
+		(pts
+			(xy 69.85 124.46) (xy 36.83 124.46)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "fc03adbf-bf3c-40bf-97ea-1841deb4fc28")
+	)
+	(wire
+		(pts
+			(xy 115.57 129.54) (xy 105.41 129.54)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "fc15199b-7414-4d9d-9850-e4f9c764643f")
+	)
+	(wire
+		(pts
+			(xy 196.85 114.3) (xy 179.07 114.3)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "fdae8a91-b6af-418a-ba5a-2dd98e4fd11b")
+	)
+	(wire
+		(pts
+			(xy 105.41 99.06) (xy 140.97 99.06)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "fe4abf2a-beeb-456e-82f3-459c2403e0e2")
+	)
+	(label "OUTPUT"
+		(at 36.83 124.46 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "1f7e3b82-2a9d-4090-8159-d0dca314a3e7")
+	)
+	(label "OUTPUT"
+		(at 184.15 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "562ec5a5-b5c8-42b1-a5b1-0a60a2748f83")
+	)
+	(label "GAIN"
+		(at 110.49 119.38 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "5a003599-6fe1-4080-a8f3-34ce5415183c")
+	)
+	(label "A/R"
+		(at 184.15 104.14 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "919f83f1-cb20-4d15-bcb5-41d8ceeb4fb2")
+	)
+	(label "A/R"
+		(at 110.49 124.46 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "d1878ee8-d1e8-453c-a187-78ec0b222ff4")
+	)
+	(label "GAIN"
+		(at 184.15 109.22 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "f0a8586b-e838-466f-abbe-64092a1d50b3")
+	)
+	(label "INPUT"
+		(at 128.27 134.62 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "f90c567b-e5a3-4efc-aded-ae2f593aaeb2")
+	)
+	(hierarchical_label "Ground"
+		(shape input)
+		(at 222.25 119.38 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "68915511-cf87-4a8e-8ccc-ad3130f53da3")
+	)
+	(hierarchical_label "VCC_3.3V"
+		(shape input)
+		(at 217.17 104.14 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d68c09b8-8727-491f-864d-7d5238de63b1")
+	)
+	(hierarchical_label "output"
+		(shape input)
+		(at 215.9 81.28 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f30dd82e-23c0-4bd7-a058-08c8b07268fd")
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:R-US_R0805")
+		(at 133.35 104.14 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0593dc38-28f5-458e-8b06-d62c45118f74")
+		(property "Reference" "R1"
+			(at 137.16 105.6386 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "150k"
+			(at 137.16 100.838 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:R0805"
+			(at 133.35 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d990f8d3-cc62-4343-934f-a3dee650a4ce")
+		)
+		(pin "1"
+			(uuid "5f8b2f25-677e-4b88-8bae-eae98ed41c49")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:FERRITE0805")
+		(at 201.93 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1bc4080d-0828-46f8-a447-63eebd538cce")
+		(property "Reference" "FB1"
+			(at 199.39 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "FERRITE"
+			(at 199.39 114.935 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:0805"
+			(at 201.93 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 201.93 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 201.93 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "264c5ff0-8180-4af5-a074-f561e6d08cca")
+		)
+		(pin "2"
+			(uuid "1b9fc4e9-f0ab-4ba6-a552-919f8a9d66f9")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "FB1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:GND")
+		(at 120.65 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1c172b13-816d-44bd-932b-5328e851eeb1")
+		(property "Reference" "#GND12"
+			(at 120.65 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 118.11 119.38 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 120.65 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b98f748f-70d1-47a0-8b6a-9a3a07f1ee35")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "#GND12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:R-US_R0805")
+		(at 128.27 121.92 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "285d0cde-01f6-4451-a0a0-47df6a3933e7")
+		(property "Reference" "R3"
+			(at 126.7714 125.73 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "2.2K"
+			(at 131.572 125.73 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:R0805"
+			(at 128.27 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 128.27 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c360b196-665f-4dd9-9c8e-72e4a2bb496b")
+		)
+		(pin "2"
+			(uuid "783ddb78-6725-489c-8aa1-0b93cdd26c2b")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:GND")
+		(at 140.97 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2b7f19f7-2e11-4f38-9b9b-8b0a288ad9bd")
+		(property "Reference" "#GND9"
+			(at 140.97 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 138.43 124.46 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 140.97 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ac8f08d8-49f8-4e32-8723-480b8eb9ddb4")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "#GND9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:C-USC0805K")
+		(at 214.63 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2ccdbe8a-aca3-485e-ab90-f723cf2b401b")
+		(property "Reference" "C1"
+			(at 215.646 111.125 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "2.2uF"
+			(at 215.646 115.951 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:C0805K"
+			(at 214.63 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 214.63 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 214.63 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bcbff8cd-1a5a-441f-979a-212ec6dde048")
+		)
+		(pin "2"
+			(uuid "0fe82d53-5540-40f4-8c95-30978b4632b3")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:GND")
+		(at 133.35 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3cafb4e8-06c1-42db-8a29-7c2dbcdae243")
+		(property "Reference" "#GND5"
+			(at 133.35 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 130.81 154.94 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "12f5d076-87a6-4768-9193-c1e96422a88c")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "#GND5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:GND")
+		(at 67.31 114.3 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3d547cff-b0f3-4cb9-a092-8cfb648ea4d4")
+		(property "Reference" "#GND6"
+			(at 67.31 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 64.77 111.76 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 67.31 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 67.31 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 67.31 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6f433495-2ac3-408f-aad3-0875194c4aef")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "#GND6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:R-US_R0805")
+		(at 140.97 109.22 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3eb82d7e-9951-45d0-a42f-a6a0fbd9043a")
+		(property "Reference" "R2"
+			(at 139.4714 113.03 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "100k"
+			(at 144.272 113.03 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:R0805"
+			(at 140.97 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 140.97 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "259eefd3-45f3-4c7f-a339-70e9be858d91")
+		)
+		(pin "2"
+			(uuid "4183daa8-b5dc-4cf2-a4ed-9ae7461f2000")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:C-USC0805K")
+		(at 113.03 109.22 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "43b0dc8f-99cb-449d-b8cc-fcfbe673693d")
+		(property "Reference" "C8"
+			(at 112.395 108.204 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "0.47uF"
+			(at 117.221 108.204 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:C0805K"
+			(at 113.03 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 113.03 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 113.03 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7957fabb-46ad-487f-aa28-dbef479d56a9")
+		)
+		(pin "2"
+			(uuid "70756384-bc71-4a40-b826-d181b8205a14")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:GND")
+		(at 95.25 91.44 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "614f84e9-d2a3-4e6c-a002-bcb50bf07664")
+		(property "Reference" "#GND2"
+			(at 95.25 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 97.79 93.98 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.25 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 95.25 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "20d9472c-7ddd-4893-9427-57d8360a1573")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "#GND2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:C-USC0805K")
+		(at 46.99 109.22 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "64ac2c42-fcbf-4f63-a4d3-aae14dd867a0")
+		(property "Reference" "C5"
+			(at 47.625 110.236 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "2.2uF"
+			(at 42.799 110.236 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:C0805K"
+			(at 46.99 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.99 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 46.99 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b1ebed6b-b95f-4032-990b-ed5a831bdb1c")
+		)
+		(pin "2"
+			(uuid "ba76010a-aa8f-4d3c-b2ab-c953d82d11de")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:VDD")
+		(at 214.63 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "65686481-8633-4fd0-a149-af1c10ea4762")
+		(property "Reference" "#VDD1"
+			(at 214.63 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VDD"
+			(at 212.09 99.06 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 214.63 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 214.63 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 214.63 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "be507981-d149-4d1a-8543-fb38d83ca606")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "#VDD1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:HEADER-1X576MIL")
+		(at 176.53 109.22 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "67db6bef-58dc-455d-8384-7aef66ba77fb")
+		(property "Reference" "J2"
+			(at 182.88 117.475 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "HEADER-1X576MIL"
+			(at 182.88 99.06 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:1X05_ROUND_76"
+			(at 176.53 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 176.53 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 176.53 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "de53f199-9c8e-43de-9cda-f8ec1dfc8fe5")
+		)
+		(pin "5"
+			(uuid "58984b79-733b-4ff5-adc6-6a296c32b655")
+		)
+		(pin "3"
+			(uuid "33bd56b0-3dc5-4461-95ce-b07870e23228")
+		)
+		(pin "1"
+			(uuid "54115910-3ea3-4b7c-8eda-c85a25572b81")
+		)
+		(pin "2"
+			(uuid "bea2129d-a863-42a9-9224-4d1940e29b13")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:VDD")
+		(at 59.69 119.38 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "752369c6-55e3-4a40-a02a-7ed1fad0d3c2")
+		(property "Reference" "#VDD8"
+			(at 59.69 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VDD"
+			(at 62.23 121.92 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1fce7ef2-1001-4f81-90ed-afe72d70b2e9")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "#VDD8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:FERRITE0805")
+		(at 201.93 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "78604f43-858b-4f9f-b265-61179d027be7")
+		(property "Reference" "FB2"
+			(at 199.39 117.475 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "FERRITE"
+			(at 199.39 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:0805"
+			(at 201.93 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 201.93 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 201.93 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f2060528-dd7a-4056-9a02-6e9f7af3f595")
+		)
+		(pin "2"
+			(uuid "af59961a-d453-45bb-b83c-7f974ac82561")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "FB2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:MAX9814TDFN14")
+		(at 87.63 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9041e3c3-0a82-42b9-8d33-620441dd3d57")
+		(property "Reference" "U$1"
+			(at 85.09 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Value" "MAX9814TDFN14"
+			(at 87.63 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:TDFN14_3X3MM"
+			(at 87.63 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 87.63 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "P$9"
+			(uuid "38c72658-4c23-4e3a-9b3f-957005c7e768")
+		)
+		(pin "P$4"
+			(uuid "1bf38fd8-32da-4213-9989-19d94c87e64c")
+		)
+		(pin "P$7"
+			(uuid "75c52878-c6d2-447c-ad47-c9fc367b9dee")
+		)
+		(pin "P$1"
+			(uuid "7361599a-c6fb-487e-94c7-e97ef89830be")
+		)
+		(pin "P$10"
+			(uuid "e8441788-7a9b-44c3-aa67-ed054ad3bdc0")
+		)
+		(pin "P$11"
+			(uuid "2834f96a-66f2-45aa-b679-644743b729d0")
+		)
+		(pin "P$12"
+			(uuid "0dd662a5-fa41-4f63-8ff2-511dd0762753")
+		)
+		(pin "P$13"
+			(uuid "4a502426-cd57-430e-9e05-b6604e9e13ec")
+		)
+		(pin "P$14"
+			(uuid "826e27b1-cffb-4791-ba11-8c5a9a3b05b7")
+		)
+		(pin "P$2"
+			(uuid "56ff6c3c-99fe-4c79-b343-d73a0648ae76")
+		)
+		(pin "P$5"
+			(uuid "400e49f4-9c5d-4192-a033-3eb42b747906")
+		)
+		(pin "P$THERMAL"
+			(uuid "b006c441-c6df-4d1d-a5b1-1fcc9dd443b6")
+		)
+		(pin "P$8"
+			(uuid "9550f159-0206-42c9-827b-ca11d91d49eb")
+		)
+		(pin "P$6"
+			(uuid "6f808311-db39-4505-8cee-52855a25243e")
+		)
+		(pin "P$3"
+			(uuid "bbda126d-e968-438a-ab10-626f7eea5955")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "U$1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:VDD")
+		(at 59.69 104.14 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9595d913-8268-46c2-a4a8-b046ba5bcf92")
+		(property "Reference" "#VDD9"
+			(at 59.69 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VDD"
+			(at 62.23 106.68 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4819ca7f-4b1a-4d67-94c6-8f38858edbcd")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "#VDD9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:ELECTRET")
+		(at 143.51 144.78 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a47c3450-c45d-4775-8e9e-a436e4fddcac")
+		(property "Reference" "Q1"
+			(at 138.43 137.16 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "CMA-4544PF-W"
+			(at 138.43 147.32 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:9.7ELECTRET"
+			(at 143.51 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 143.51 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 143.51 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "+"
+			(uuid "a7cb5c12-acc5-42d4-a5c9-e297fed51e4c")
+		)
+		(pin "-"
+			(uuid "b03a1891-f255-4dad-8974-041a8c3dca39")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:GND")
+		(at 34.29 104.14 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a560512b-eb29-4e72-b40f-b9a32d2cf449")
+		(property "Reference" "#GND8"
+			(at 34.29 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 31.75 101.6 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 34.29 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 34.29 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 34.29 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d910cb7f-2dc1-442b-bb24-8fc4c2d97d27")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "#GND8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:GND")
+		(at 69.85 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c075290e-5a0d-4a71-a723-93c4629645f4")
+		(property "Reference" "#GND10"
+			(at 69.85 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 67.31 134.62 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 69.85 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.85 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f988d0f0-fa3a-493d-ab42-746ee3cd6b26")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "#GND10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:FIDUCIAL")
+		(at 255.27 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d1109a5f-e700-40d9-8a37-51e0627c4c4d")
+		(property "Reference" "U$3"
+			(at 255.27 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "FIDUCIAL"
+			(at 255.27 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:FIDUCIAL_1MM"
+			(at 255.27 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255.27 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 255.27 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "U$3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:C-USC0805K")
+		(at 115.57 137.16 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d1ddf8cc-99d9-4b13-b59e-2cc3689e1bc1")
+		(property "Reference" "C9"
+			(at 114.554 136.525 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 114.554 141.351 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:C0805K"
+			(at 115.57 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b940be45-f73d-462b-9bb9-91e293512e47")
+		)
+		(pin "2"
+			(uuid "4aaeb4ed-cfcc-46c8-8181-5429e395827b")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:MOUNTINGHOLE2.0")
+		(at 247.65 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e3027663-82c7-4a42-bd83-41b71a3c93e6")
+		(property "Reference" "U$4"
+			(at 247.65 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MOUNTINGHOLE2.0"
+			(at 247.65 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:MOUNTINGHOLE_2.0_PLATED"
+			(at 247.65 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.65 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 247.65 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "U$4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:MOUNTINGHOLE2.0")
+		(at 242.57 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e4436e1a-2d16-4f43-b97f-ddf44524353e")
+		(property "Reference" "U$5"
+			(at 242.57 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "MOUNTINGHOLE2.0"
+			(at 242.57 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:MOUNTINGHOLE_2.0_PLATED"
+			(at 242.57 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 242.57 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 242.57 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "U$5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:GND")
+		(at 214.63 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f28b37e7-7af1-4c3a-b93a-5d14717d89cc")
+		(property "Reference" "#GND1"
+			(at 214.63 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 212.09 124.46 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 214.63 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 214.63 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 214.63 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "095f3cdf-8cda-4b3f-a0dd-4b628fc1b67b")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "#GND1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:FIDUCIAL")
+		(at 260.35 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f5d0b6e2-da80-4d60-bb34-5d8ff408474b")
+		(property "Reference" "U$2"
+			(at 260.35 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "FIDUCIAL"
+			(at 260.35 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:FIDUCIAL_1MM"
+			(at 260.35 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 260.35 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "U$2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit MAX9814-eagle-import:C-USC0805K")
+		(at 46.99 99.06 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ff3b35a8-08a1-46ff-9a05-6a2870b2e32e")
+		(property "Reference" "C2"
+			(at 47.625 100.076 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 42.799 100.076 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Adafruit MAX9814:C0805K"
+			(at 46.99 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.99 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 46.99 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7211a31d-bc14-48a7-b6c7-65cfbca74096")
+		)
+		(pin "2"
+			(uuid "15b0c91c-106c-43bc-ab26-8a746cb6eedb")
+		)
+		(instances
+			(project ""
+				(path "/11a0035d-6515-40be-b9c3-24973cca61eb"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

@@ -1,0 +1,7 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Raspberry_Pi_Pico_W")(type "KiCad")(uri "${KIPRJMOD}/Raspberry_Pi_Pico_W_Kicad_Files")(options "")(descr ""))
+  (lib (name "BarrelJack")(type "KiCad")(uri "${KIPRJMOD}/BarrelJack")(options "")(descr ""))
+  (lib (name "Adafruit-MAX9814")(type "KiCad")(uri "${KIPRJMOD}/Adafruit-MAX9814-AGC-Microphone-PCB")(options "")(descr ""))
+  (lib (name "LTC1655CS8_TRPBF")(type "KiCad")(uri "${KIPRJMOD}/LTC1655CS8_TRPBF")(options "")(descr ""))
+)

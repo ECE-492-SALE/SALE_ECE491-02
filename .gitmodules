@@ -13,3 +13,11 @@
 [submodule "ESPHomeDeviceConfigs"]
 	path = ESPHomeDeviceConfigs
 	url = https://github.com/calumapplepie/ESPHomeDeviceConfigs.git
+
+[submodule "SmartSpeaker/Speaker/Adafruit-MAX9814-AGC-Microphone-PCB"]
+	path = SmartSpeaker/Speaker/Adafruit-MAX9814-AGC-Microphone-PCB
+	url = https://github.com/adafruit/Adafruit-MAX9814-AGC-Microphone-PCB
+[submodule "SmartSpeaker/Speaker/Raspberry_Pi_Pico_W_Kicad_Files"]
+	path = SmartSpeaker/Speaker/Raspberry_Pi_Pico_W_Kicad_Files
+	url = https://github.com/bdubs-astro/Raspberry_Pi_Pico_W_Kicad_Files
+

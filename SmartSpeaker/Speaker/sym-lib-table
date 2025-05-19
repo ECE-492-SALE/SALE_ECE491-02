@@ -1,0 +1,7 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "LTC1655CS8_TRPBF")(type "KiCad")(uri "${KIPRJMOD}/LTC1655CS8_TRPBF/LTC1655CS8_TRPBF.kicad_sym")(options "")(descr ""))
+  (lib (name "Raspberry_Pi_Pico_W_SC0918")(type "KiCad")(uri "${KIPRJMOD}/Raspberry_Pi_Pico_W_Kicad_Files/Raspberry_Pi_Pico_W_SC0918.kicad_sym")(options "")(descr ""))
+  (lib (name "Adafruit MAX9814-eagle-import")(type "KiCad")(uri "/home/calum/Documents/Senior Project/SmartSpeaker/Speaker/Adafruit-MAX9814-AGC-Microphone-PCB/Adafruit MAX9814-eagle-import.kicad_sym")(options "")(descr ""))
+  (lib (name "Barrel_Jack_Custom")(type "KiCad")(uri "${KIPRJMOD}/BarrelJack/2025-02-03_18-03-35.kicad_sym")(options "")(descr ""))
+)
