@@ -1,0 +1,8 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "LM2575-5.0YN")(type "KiCad")(uri "${KIPRJMOD}/LM2575-5.0YN.kicad_sym")(options "")(descr ""))
+  (lib (name "NCP164CSN330T1G")(type "KiCad")(uri "${KIPRJMOD}/NCP164CSN330T1G.kicad_sym")(options "")(descr ""))
+  (lib (name "RPiPico")(type "KiCad")(uri "${KIPRJMOD}/RPiPico.kicad_sym")(options "")(descr ""))
+  (lib (name "powerjack")(type "KiCad")(uri "${KIPRJMOD}/powerjack.kicad_sym")(options "")(descr ""))
+  (lib (name "LM2940T-5")(type "KiCad")(uri "${KIPRJMOD}/LM2940T-5.kicad_sym")(options "")(descr ""))
+)
