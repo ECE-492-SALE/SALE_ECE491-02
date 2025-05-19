@@ -5,7 +5,10 @@ import sys
 import socket
 import gc
 
+# Internet Credentials
 ssid = 'pards'
+password = ''
+ip_roku = '139.147.192.3'
 
 def print_mem():
     print("Available memory (bytes): ", gc.mem_free())
@@ -45,11 +48,14 @@ def print_time_since_last():
     last_call = time.ticks_ms()
 
 ip_local = connect()
+ip_local_bytes = ip_local.encode('utf-8')
+ip_roku_bytes = ip_roku.encode('utf-8')
+
 
 try:
     print_mem()
     addr_local = (ip_local, 8060)
-    addr_roku  = socket.getaddrinfo('139.147.192.3', 8060)[0][-1]
+    addr_roku  = socket.getaddrinfo(ip_roku, 8060)[0][-1]
 
     socket_receive = socket.socket()
     socket_receive.bind(addr_local)
@@ -88,7 +94,7 @@ try:
                 break;
                 
             if request_data: 
-                request_data = request_data.replace(b"139.147.192.4", b"139.147.192.3", 1)
+                request_data = request_data.replace(ip_local_bytes, ip_roku_bytes, 1)
                 print(f"request data: {request_data}")
             
                 data_sent = socket_roku.write(request_data)
