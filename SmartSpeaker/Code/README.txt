@@ -1,0 +1,1 @@
+Most (almost all) code is found upstream, in pull requests to the the esphome/esphome project.  The YAML configuration file specifies those requests and brings in the source.  It is impractical and unnecessary to attempt to duplicate the code here, as any duplication would be useless without the rest of the (large) project.

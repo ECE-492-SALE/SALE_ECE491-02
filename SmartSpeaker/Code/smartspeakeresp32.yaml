@@ -1,0 +1,317 @@
+esphome:
+  name: smartspeakeresp32
+  friendly_name: SmartSpeakerESP32
+
+substitutions:
+  speaker_sample_rate: "44100"
+
+esp32:
+  board: arduino_nano_esp32
+  framework:
+    type: esp-idf
+    version: latest
+
+    # add some config options from voice assistant PE
+    # these mostly serve as 'go faster' buttons
+    sdkconfig_options:
+      CONFIG_ESP32S3_DEFAULT_CPU_FREQ_240: "y"
+      CONFIG_ESP32S3_DATA_CACHE_64KB: "y" # bigger data cache because we will have psram
+      CONFIG_ESP32S3_DATA_CACHE_LINE_64B: "y"
+      CONFIG_ESP32S3_INSTRUCTION_CACHE_32KB: "y"
+
+      CONFIG_MBEDTLS_EXTERNAL_MEM_ALLOC: "y"
+
+external_components:
+  - source: github://pr#8574
+    components: [ adc_microphone, voice_assistant, microphone, i2s_audio]
+    refresh: 1days
+  - source: github://pr#8633
+    components: [ speaker_math ]
+    refresh: 20min
+
+# Enable logging
+logger:
+  level: VERBOSE
+  logs:
+    ledc.output: INFO
+
+# Setup PSRAM to solve OOM errors
+psram:
+  mode: octal
+  speed: 40MHz # undoccumented if 80MHz is supported, but octal definitely is.
+  # testing had errors when running at 80MHz
+
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: !secret smartspeaker_ha_key
+
+button:
+  - platform: template
+    name: StartRecord
+    id: mic_button
+    on_press:
+      then:
+        - microphone.capture: mic_id
+        - delay: 1s
+        - microphone.stop_capture: mic_id
+
+ota:
+  - platform: esphome
+    password: !secret smartspeaker_ota_key
+
+wifi:
+  networks: 
+  - ssid: !secret wifi_ssid
+    password: !secret wifi_password
+    hidden: true
+    bssid: 9C:EF:D5:F9:59:EA
+
+  reboot_timeout: 3min # we seem to run into the 'issues requiring a full reboot' every time
+
+  manual_ip:
+    static_ip: 10.20.0.21
+    gateway: 10.20.0.1
+    subnet: 255.255.255.0
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Smartspeakeresp32"
+    password: "pagVEo7Gwzda"
+
+captive_portal:
+    
+
+# test board led
+light:
+  - platform: rgb
+    name: "Living Room Lights"
+    red: output_RED
+    green: output_GREEN
+    blue: output_BLUE
+
+output:
+  - platform: ledc
+    pin: 
+      number: GPIO46
+      ignore_strapping_warning: true
+    id: output_RED
+    inverted: true
+
+  - platform: ledc
+    pin: 
+      number: GPIO0
+      ignore_strapping_warning: true
+    id: output_GREEN
+    inverted: true
+
+  - platform: ledc
+    pin: 
+      number: GPIO45
+      ignore_strapping_warning: true
+    id: output_BLUE
+    inverted: true
+
+
+# i2c output (its not actually i2c, but we can pretend)
+# TODO: finish making`
+i2s_audio:
+  - id: i2s_output
+    # i2s_output data pin is set below
+    i2s_lrclk_pin:
+      number: GPIO18 # pin D9
+    i2s_bclk_pin:
+      number: GPIO10 # pin D7
+    #use_legacy: true
+
+
+speaker:
+  - platform: i2s_audio
+    id: speaker_dac_out
+    dac_type: external
+    sample_rate: $speaker_sample_rate
+    i2s_mode: primary
+    i2s_dout_pin: GPIO38 # pin D11
+    i2s_comm_fmt: stand_msb
+    channel: mono
+    bits_per_sample: 16bit
+    buffer_duration: 500ms
+  # Custom speaker_math component which converts data to be unsigned
+  - platform: speaker_math
+    id: mathing_speaker
+    output_speaker: speaker_dac_out
+    convert_to_unsigned: true
+    intercept_volume: true
+  # Virtual speakers to combine the announcement and media streams together into one output
+  - platform: mixer
+    id: mixing_speaker
+    output_speaker: mathing_speaker
+    num_channels: 2
+    source_speakers:
+      - id: announcement_mixing_input
+        timeout: never
+      - id: media_mixing_input
+        timeout: never
+
+  # Vritual speakers to resample each pipelines' audio, if necessary, as the mixer speaker requires the same sample rate
+  - platform: resampler
+    id: announcement_resampling_speaker
+    output_speaker: announcement_mixing_input
+    sample_rate: $speaker_sample_rate
+    bits_per_sample: 16
+  - platform: resampler
+    id: media_resampling_speaker
+    output_speaker: media_mixing_input
+    sample_rate: $speaker_sample_rate
+    bits_per_sample: 16
+
+media_player:
+  - platform: speaker
+    id: external_media_player
+    name: Media Player
+    internal: False
+    volume_increment: 0.05
+    volume_min: 0
+    volume_max: 1
+    announcement_pipeline:
+      speaker: announcement_resampling_speaker
+      format: FLAC     # FLAC is the least processor intensive codec
+      num_channels: 1  # Stereo audio is unnecessary for announcements
+      sample_rate: $speaker_sample_rate
+    media_pipeline:
+      speaker: media_resampling_speaker
+      format: FLAC     # FLAC is the least processor intensive codec
+      num_channels: 2
+      sample_rate: $speaker_sample_rate
+
+    on_announcement:
+      - mixer_speaker.apply_ducking:
+          id: media_mixing_input
+          decibel_reduction: 10
+          duration: 0.0s
+    on_state:
+      if:
+        condition:
+          and:
+            #- switch.is_off: timer_ringing
+            - not:
+                voice_assistant.is_running:
+            - not:
+                media_player.is_announcing:
+        then:
+          - mixer_speaker.apply_ducking:
+              id: media_mixing_input
+              decibel_reduction: 0
+              duration: 1.0s
+    files:
+      - id: mute_switch_on_sound
+        file: https://github.com/esphome/home-assistant-voice-pe/raw/dev/sounds/mute_switch_on.flac
+      - id: mute_switch_off_sound
+        file: https://github.com/esphome/home-assistant-voice-pe/raw/dev/sounds/mute_switch_off.flac
+      - id: timer_finished_sound
+        file: https://github.com/esphome/home-assistant-voice-pe/raw/dev/sounds/timer_finished.flac
+      - id: wake_word_triggered_sound
+        file: https://github.com/esphome/home-assistant-voice-pe/raw/dev/sounds/wake_word_triggered.flac
+      - id: easter_egg_tick_sound
+        file: https://github.com/esphome/home-assistant-voice-pe/raw/dev/sounds/easter_egg_tick.mp3
+      - id: easter_egg_tada_sound
+        file: https://github.com/esphome/home-assistant-voice-pe/raw/dev/sounds/easter_egg_tada.mp3
+
+microphone:
+  - platform: adc_microphone
+    id: mic_id
+    adc_pin: GPIO4 # pin A2
+    sample_rate: 16000
+    on_data:
+      - logger.log:
+          format: "Received %d bytes"
+          args: ['x.size()']
+      - sensor.template.publish:
+          id: adc_average
+          state: !lambda |-
+            int size = x.size();
+            double sum  = 0;
+            for(auto i : x) {
+              sum += i;
+            }
+            return sum / size;
+
+sensor:
+  id: adc_average
+  name: "ADC Average Value"
+  platform: template
+  accuracy_decimals: 5
+  expire_after: 2s
+
+mqtt:
+  broker: 10.20.0.1
+  username: calumspeaker
+  password: !secret mqtt_password_calumspeaker
+  discovery: False
+  log_topic: null
+
+
+voice_assistant:
+  id: va
+  microphone: mic_id
+  media_player: external_media_player
+  use_wake_word: true
+  noise_suppression_level: 0
+  auto_gain: 0 dbfs
+  volume_multiplier: 1
+
+  on_client_disconnected:
+    - voice_assistant.stop:
+  
+  # When the voice assistant detects a wake word
+  on_wake_word_detected:
+    - mixer_speaker.apply_ducking:
+        id: media_mixing_input
+        decibel_reduction: 10  # Number of dB quieter; higher implies more quiet, 0 implies full volume
+        duration: 0.0s         # The duration of the transition (default is no transition)
+  
+  # When the voice assistant ends ... (needs testing)
+  on_end:
+    then:
+      # Stop ducking audio.
+      - mixer_speaker.apply_ducking:
+          id: media_mixing_input
+          decibel_reduction: 0
+          duration: 1.0s
+      # if the switch to keep listening is still on... keep listening
+      - if:
+          condition:
+            switch.is_on: push_to_talk
+          then:
+            - voice_assistant.start
+
+
+switch:
+  - platform: template
+    name: Start Listening
+    id: start_listening
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+    on_turn_on:
+      - if:
+          condition:
+            not:
+              - voice_assistant.is_running
+          then:
+            - voice_assistant.start_continuous
+    on_turn_off:
+      - voice_assistant.stop
+  - platform: template
+    name: Push to Listen
+    id: push_to_talk
+    optimistic: true
+    on_turn_on:
+      - if:
+          condition:
+            - voice_assistant.is_running
+          then:
+            - voice_assistant.stop
+      - voice_assistant.start
+    on_turn_off:
+      - voice_assistant.stop
