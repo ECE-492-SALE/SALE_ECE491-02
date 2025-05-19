@@ -1,0 +1,10 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "SeniorDesignParts")(type "KiCad")(uri "${KIPRJMOD}/SeniorDesignParts.kicad_sym")(options "")(descr ""))
+  (lib (name "TLV2217-33KCSE3")(type "KiCad")(uri "${KIPRJMOD}/TLV2217-33KCSE3.kicad_sym")(options "")(descr ""))
+  (lib (name "SR5-3V-200-1C")(type "KiCad")(uri "${KIPRJMOD}/SR5-3V-200-1C.kicad_sym")(options "")(descr ""))
+  (lib (name "RPi_Pico")(type "KiCad")(uri "${KIPRJMOD}/RPi_Pico.kicad_sym")(options "")(descr ""))
+  (lib (name "CSD13302W")(type "KiCad")(uri "${KIPRJMOD}/CSD13302W.kicad_sym")(options "")(descr ""))
+  (lib (name "powerjack")(type "KiCad")(uri "${KIPRJMOD}/powerjack.kicad_sym")(options "")(descr ""))
+  (lib (name "DIP-4 PC817C")(type "KiCad")(uri "${KIPRJMOD}/DIP-4 PC817C.kicad_sym")(options "")(descr ""))
+)
